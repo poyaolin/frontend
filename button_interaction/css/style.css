@@ -1,0 +1,106 @@
+*{
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    /*  設定固定寬高時，不會因內邊距或邊框改變而影響佈局 */
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+html, body{
+    height: 100%;
+}
+.wrapper{
+    height: 435px;
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(40deg, #004eb7 60%, #ff299b 60%);
+}
+.product{
+    background-color: #ebeaea;
+    height: 370px;
+    /* vertical-align: bottom; */
+    margin-top: 45px;
+    z-index: 1;
+    /* overflow: hidden; */
+    text-align: center;
+}
+.image{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40px;
+    display: inline-block
+}
+.product .image img{
+    width: 100%;/* 設定寬度為父容器的100% */
+    height: auto;/* 根據寬度自動調整高度，維持比例 */
+}
+.product .info{
+    text-align: center;
+    height: 170px;
+}
+h1{
+    font-size: 16px;
+}
+h2{
+    font-size: 12px;
+    color: #8a8989;
+}
+p{
+    font-size: 12px;
+    color: #8a8989;
+}
+hr{
+    width: 75%;
+    height: 1px;
+    background-color: #8a8989;
+    border: none
+}
+.des{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.btn{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.btn a{
+    color: #ff299b;
+    font-size: 16px;
+}
+.button:before{
+    content: "";
+    display: block;
+    width: 0 ;
+    height: 2px;
+    background-color: #ff299b;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+.button:after{
+    content: "";
+    display: block;
+    width: 0 ;
+    height: 2px;
+    background-color: #ff299b;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transform: translateX(50%);
+    transition: all 0.3s;
+}
+.button:hover:before, .button:hover:after{
+    width: 100%;
+}
